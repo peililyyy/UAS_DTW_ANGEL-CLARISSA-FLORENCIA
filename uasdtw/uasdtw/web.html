@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perabot Budi Jaya</title>
+  <meta name="description" content="Toko perabot & furnitur rumah di Medan Marelan. Lemari, kursi, meja, sofa, rak.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand" aria-label="Home">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M3 12l9-8 9 8v8a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2v-8z"/>
+        </svg>
+        <span>Perabot Budi Jaya</span>
+        <span class="badge">Marelan</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#produk">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost" id="btn-fav">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M12 21s-8-4.438-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.562-8 11-8 11z"/>
+          </svg>
+          <span>Favorit</span>
+        </button>
+
+        <button class="btn primary" id="btn-cart">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.44A2 2 0 0 0 10 19h9v-2h-8.42a.25.25 0 0 1-.22-.37L11 14h6a2 2 0 0 0 1.8-1.1l3.6-7.2H7z"/>
+          </svg>
+          <span>Keranjang</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="kicker">Koleksi Favorit Marelan</p>
+          <h1 class="title">Perabot rumah modern, harga bersahabat.</h1>
+
+          <p class="lead">
+            Pilihan lemari, meja, kursi, rak, sofa, dan perlengkapan rumah untuk kebutuhan harian Anda
+            di kawasan Medan Marelan.
+          </p>
+
+          <div class="hero-cta">
+            <button class="btn primary" id="cta-jelajah">Lihat Produk</button>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card">
+            <div class="hero-product"
+                 style="background-image:url('gambar/kursiplastik.jpg');
+                        background-size:cover;
+                        background-position:center;">
+              <span class="price-tag">Mulai Rp59.000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="about-wrapper">
+        <div>
+          <h2 class="section-title">Tentang Kami</h2>
+          <p class="section-text">
+            Perabot Budi Jaya Marelan adalah toko perabot lokal di Medan Marelan yang menyediakan
+            lemari, kursi, meja, sofa, dan rak dengan harga yang masih terjangkau untuk keluarga.
+          </p>
+
+          <ul class="about-list">
+            <li>Cocok untuk rumah, kos, dan ruko.</li>
+            <li>Model kekinian, stok rutin diperbarui.</li>
+            <li>Info stok dan warna lengkap melalui Instagram.</li>
+          </ul>
+        </div>
+
+        <div class="hero-card about-media">
+          <div class="hero-product about-photo"
+               style="background-image:url('gambar/tentangkami.jpg');
+                      background-size:cover;
+                      background-position:center;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="section">
+      <div class="produk-header">
+        <div>
+          <h2 class="section-title">Produk Pilihan</h2>
+          <p class="section-text">
+            Contoh produk yang tersedia di Perabot Budi Jaya Marelan. Untuk model dan warna lengkap,
+            silakan lihat katalog di Instagram.
+          </p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="search">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path d="M10 4a6 6 0 1 1 0 12 6 6 6 0 0 1 0-12zm8.7 13.3-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="q" type="search" placeholder="Cari produk...">
+        </div>
+
+        <div class="chips">
+          <button class="chip active" data-cat="all">Semua</button>
+          <button class="chip" data-cat="Sofa">Sofa</button>
+          <button class="chip" data-cat="Kursi">Kursi</button>
+          <button class="chip" data-cat="Meja">Meja</button>
+          <button class="chip" data-cat="Lemari">Lemari</button>
+          <button class="chip" data-cat="Rak">Rak</button>
+        </div>
+      </div>
+
+      <!-- GRID PRODUK -->
+      <section id="koleksi" class="grid" aria-live="polite"></section>
+    </section>
+
+    <!-- DRAWER KERANJANG -->
+    <aside id="cart-drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="backdrop" data-close></div>
+      <div class="panel">
+        <header>
+          <strong id="cart-title">Keranjang</strong>
+          <button class="btn outline" data-close>Tutup</button>
+        </header>
+
+        <div id="cart-list" class="cart-list"></div>
+
+        <footer>
+          <div class="total">
+            <span>Subtotal</span>
+            <strong id="subtotal">Rp0</strong>
+          </div>
+          <button class="btn primary" id="checkout">Checkout</button>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- DRAWER FAVORIT -->
+    <aside id="fav-drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="fav-title">
+      <div class="backdrop" data-close></div>
+      <div class="panel">
+        <header>
+          <strong id="fav-title">Produk Favorit</strong>
+          <button class="btn outline" data-close>Tutup</button>
+        </header>
+        <div id="fav-list" class="cart-list"></div>
+      </div>
+    </aside>
+
+    <!-- MODAL DETAIL PRODUK -->
+    <aside id="detail-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <div class="backdrop" data-close></div>
+      <div class="modal-panel">
+        <header>
+          <strong id="detail-title">Detail Produk</strong>
+          <button class="btn outline" data-close>Tutup</button>
+        </header>
+        <div id="detail-body" class="modal-body"></div>
+      </div>
+    </aside>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="contact-wrapper">
+
+        <form id="contact-form" class="contact-card">
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="section-text">
+            Mau tanya stok, harga paket, atau pesanan banyak? Kirim pesan lewat form ini.
+          </p>
+          <input class="input" id="name" placeholder="Nama" required>
+          <input class="input" id="email" placeholder="Email (opsional)">
+          <textarea class="input textarea" id="msg" placeholder="Pesan..." required></textarea>
+          <button class="btn primary" type="submit">Kirim</button>
+          <p id="contact-status" class="contact-status"></p>
+        </form>
+
+        <div class="contact-info card">
+          <strong>Showroom</strong>
+          <p class="lead">Perabot Budi Jaya Marelan</p>
+          <p class="lead">
+            Jl. Marelan VII, Rengas Pulau<br>
+            Medan Marelan, Sumatera Utara
+          </p>
+          <p class="lead">Jam buka: 10.00 – 21.00</p>
+          <p class="lead">
+            Instagram:
+            <a href="https://www.instagram.com/budijayaperabot/" target="_blank">@budijayaperabot</a>
+          </p>
+          <div class="map-placeholder"
+     style="background-image:url('gambar/showroom.jpg');
+            background-size:cover;
+            background-position:center;
+            border-radius:14px;">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      © <span id="year"></span> Perabot Budi Jaya Marelan — Katalog lengkap di Instagram.
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
