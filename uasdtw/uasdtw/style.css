@@ -57,7 +57,7 @@ img {
   padding: 24px;
 }
 
-/* Topbar / Navbar */
+/* Topbar */
 .topbar {
   position: sticky;
   top: 0;
@@ -730,3 +730,4 @@ img {
     padding: 16px;
   }
 }
+
