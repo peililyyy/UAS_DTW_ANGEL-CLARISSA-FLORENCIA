@@ -6,7 +6,7 @@ var PRODUCTS = [
   {
     id: 1,
     name: "Kursi Plastik",
-    price: 59000,
+    price: 90000,
     cat: "Kursi",
     desc: "Kursi plastik serbaguna, cocok untuk indoor maupun outdoor.",
     img: "kursiplastik"
@@ -697,3 +697,4 @@ if (yearSpan) {
 renderProducts();
 renderCart();
 updateCounters();
+
